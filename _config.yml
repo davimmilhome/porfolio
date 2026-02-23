@@ -17,4 +17,6 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
 
