@@ -10,7 +10,7 @@ Exemplo de árvore e explicação das principais pastas/arquivos:
 
 ```
 portfolio/
-├─ _config.yaml          # Configurações do Jekyll (title, tema, baseurl)
+├─ _config.yml          # Configurações do Jekyll (title, tema, baseurl)
 ├─ index.html            # Página inicial (apresentação)
 ├─ projects.html         # Página com lista de projetos
 ├─ assets/
@@ -59,7 +59,19 @@ bundle exec jekyll build
 bundle exec jekyll serve --livereload
 ```
 
-Abra `http://localhost:4000` (ou `http://localhost:4000/<baseurl>/` se `baseurl` estiver configurado no `_config.yaml`).
+Abra `http://localhost:4000` (ou `http://localhost:4000/<baseurl>/` se `baseurl` estiver configurado no `_config.yml`).
+
+
+Deploy GitHub Pages
+-------------------
+No GitHub Pages, há dois formatos principais de publicação:
+
+- **User site** (`<usuario>.github.io`): o site é servido na raiz do domínio.
+  - Exemplo em `_config.yml`: `baseurl: ""`
+- **Project site** (`<usuario>.github.io/<repositorio>`): o site é servido dentro do caminho do repositório.
+  - Exemplo em `_config.yml`: `baseurl: "/porfolio"`
+
+Use também `url` com o domínio completo (ex.: `url: "https://davi.github.io"`) para gerar links absolutos corretamente.
 
 Observações
 -----------
