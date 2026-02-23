@@ -1,7 +1,7 @@
 # -- CONFIGURAÇÕES GERAIS --
 title: "Porfólio - Davi Milhome"
 description: "Portfólio de Davim Milhome"
-baseurl: "" # Vazio p/ githubpages
+baseurl: "/porfolio" # Project site no GitHub Pages
 url: "https://davimmilhome.github.io" 
 
 # -- TEMA --
@@ -17,4 +17,3 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 plugins:
-
