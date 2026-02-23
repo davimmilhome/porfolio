@@ -1,0 +1,20 @@
+# -- CONFIGURAÇÕES GERAIS --
+title: "Porfólio - Davi Milhome"
+description: "Portfólio de Davim Milhome"
+baseurl: "" # Vazio p/ githubpages
+url: "https://davimmilhome.github.io" 
+
+# -- TEMA --
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+
+# -- NAVEGAÇÃO --
+aux_links:
+  "Perfil do GitHub":
+    - "https://github.com/davimmilhome"
+
+# -- BUILD --
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+plugins:
+

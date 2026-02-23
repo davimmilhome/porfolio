@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="pt-BR">
+  {% include head.html %}
+  <body id="top">
+    <div class="wrap">
+      {% include header.html %}
+
+      <main id="main">
+        {{ content }}
+      </main>
+
+      {% include footer.html %}
+    </div>
+
+    <script src="{{ '/assets/js/custom.js' | relative_url }}"></script>
+  </body>
+</html>
