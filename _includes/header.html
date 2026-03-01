@@ -6,6 +6,13 @@
 
   <nav class="nav" aria-label="Navegação principal">
     <a class="nav-link" href="{{ '/' | relative_url }}">Início</a>
-    <a class="nav-link" href="{{ '/projects/' | relative_url }}">Projetos</a>
+    <div class="nav-item dropdown">
+      <a class="nav-link nav-link-dropdown" href="{{ '/projects/' | relative_url }}">Projetos</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="{{ '/projects/engenharia/' | relative_url }}">⚙️ Engenharia</a>
+        <a class="dropdown-item" href="{{ '/projects/bi/' | relative_url }}">📊 BI</a>
+        <a class="dropdown-item" href="{{ '/textos/' | relative_url }}">📝 Textos/Produção Acadêmica</a>
+      </div>
+    </div>
   </nav>
 </header>
