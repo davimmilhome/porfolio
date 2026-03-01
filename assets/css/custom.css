@@ -331,6 +331,10 @@ h1{
 
 .project-media{
   padding:14px 14px 0;
+  min-height:180px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .project-image{
@@ -347,18 +351,84 @@ h1{
   gap:10px;
   padding:14px;
   flex:1;
+  justify-content:space-between;
 }
 
 .project-name{
   margin:0;
-  font-size:1.05rem;
-  line-height:1.25;
+  font-size:1.2rem;
+  line-height:1.35;
+  font-weight:600;
+  word-break:break-word;
+  min-height:auto;
+  max-height:none;
+  overflow:visible;
 }
 
 .project-desc{
   margin:0;
   color:var(--muted);
-  font-size:.94rem;
+  font-size:0.95rem;
+  line-height:1.5;
+  display:-webkit-box;
+  -webkit-line-clamp:4;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  min-height:5.7rem;
+  max-height:5.7rem;
+  transition:all .3s ease;
+}
+
+.project-desc.expanded{
+  -webkit-line-clamp:unset;
+  max-height:none;
+  overflow:visible;
+}
+
+.expand-btn{
+  align-self:flex-start;
+  padding:4px 8px;
+  margin-top:4px;
+  font-size:0.85rem;
+  color:var(--accent);
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  text-decoration:underline;
+  transition:color .2s ease;
+}
+
+.expand-btn:hover{
+  color:var(--accent2);
+}
+
+.textos-grid .project-card{
+  display:flex;
+  flex-direction:column;
+  height:auto;
+}
+
+.textos-grid .project-body{
+  flex:1;
+  justify-content:flex-start;
+}
+
+.textos-grid .project-name{
+  line-height:1.35;
+}
+
+.textos-grid .project-desc{
+  -webkit-line-clamp:unset;
+  max-height:none;
+  overflow:visible;
+  min-height:auto;
+  display:block;
+  margin-bottom:10px;
+}
+
+.textos-grid .expand-btn{
+  display:none !important;
 }
 
 .project-tags{
@@ -366,6 +436,9 @@ h1{
   flex-wrap:wrap;
   gap:8px;
   margin-top:4px;
+  min-height:2.2rem;
+  max-height:4.4rem;
+  overflow:hidden;
 }
 
 .tag-chip{
