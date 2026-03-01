@@ -43,6 +43,25 @@ a:hover{opacity:.92}
 }
 .nav a{padding:6px 10px; border-radius:999px}
 .nav a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+.nav-item{position:relative; display:inline-flex; align-items:center}
+.nav-item.dropdown:hover .dropdown-menu{opacity:1; visibility:visible; transform:translateY(0)}
+.dropdown-menu{
+  position:absolute; top:100%; left:0; margin-top:8px;
+  background:rgba(17,19,26,.95); border:1px solid var(--line);
+  border-radius:12px; box-shadow:var(--shadow);
+  backdrop-filter:blur(10px); z-index:1000;
+  opacity:0; visibility:hidden; transform:translateY(-8px);
+  transition:opacity .2s ease, visibility .2s ease, transform .2s ease;
+  min-width:220px; overflow:hidden;
+}
+.dropdown-item{
+  display:block; padding:12px 16px;
+  color:var(--text); font-size:.95rem;
+  border-bottom:1px solid var(--line);
+  transition:background .15s ease, color .15s ease;
+}
+.dropdown-item:last-child{border-bottom:none}
+.dropdown-item:hover{background:rgba(255,255,255,.08); color:var(--accent)}
 .hero{
   display:grid; grid-template-columns:1.2fr .8fr;
   gap:18px; align-items:stretch;
